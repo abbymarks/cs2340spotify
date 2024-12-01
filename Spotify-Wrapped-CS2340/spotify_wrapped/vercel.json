@@ -2,7 +2,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "spotify_wrapped/wsgi.py"
+      "dest": "manage.py"
     }
   ]
 }
