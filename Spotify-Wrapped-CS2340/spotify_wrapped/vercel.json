@@ -1,8 +1,14 @@
 {
+  "builds": [
+    {
+      "src": "manage.py",
+      "use": "@vercel/python"
+    }
+  ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "spotify_wrapped/wsgi.py"
+      "dest": "manage.py"
     }
   ]
 }

@@ -1,3 +1,4 @@
-manage.py
-spotify_wrapped/wsgi.py
-db.sqlite3
+*.pyc
+*.pyo
+__pycache__/
+.env
