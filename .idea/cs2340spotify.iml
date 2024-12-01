@@ -14,7 +14,7 @@
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/Spotify-Wrapped-CS2340/spotify_wrapped" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/spotify_wrapped" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
