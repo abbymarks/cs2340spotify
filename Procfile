@@ -1,1 +1,1 @@
-web: gunicorn spotify_wrapped.wsgi:application
+web: gunicorn spotify_wrapped.wsgi
