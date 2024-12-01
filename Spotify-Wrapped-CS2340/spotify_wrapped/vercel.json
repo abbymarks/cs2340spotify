@@ -8,7 +8,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "spotify_wrapped/manage.py"
+      "dest": "manage.py"
     }
   ]
 }
