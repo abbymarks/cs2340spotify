@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = ['cs2340spotify.vercel.app', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['cs2340spotify.herokuapp.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -54,9 +54,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 ROOT_URLCONF = "spotify_wrapped.urls"
-SESSION_ENGINE = "django.contrib.sessions.backends.db"
 
 TEMPLATES = [
     {
@@ -131,6 +129,9 @@ GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
