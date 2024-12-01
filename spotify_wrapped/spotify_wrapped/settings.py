@@ -27,6 +27,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
+SECRET_KEY = os.getenv('SECRET_KEY')
+
+if not SECRET_KEY:
+    raise ValueError("The SECRET_KEY environment variable is not set.")
+
+
 ALLOWED_HOSTS = ['cs2340spotify-4ed829aec62a.herokuapp.com', '127.0.0.1', 'localhost']
 
 
