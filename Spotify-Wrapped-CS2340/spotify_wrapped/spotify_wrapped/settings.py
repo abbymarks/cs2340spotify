@@ -22,10 +22,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-%mg4i@&pgt!s#7jlsaxy)+0srcvjdqpk6115m&2t2icf5j@j9$"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DEBUG", "False") == "True"
+DEBUG = "True"
 
 ALLOWED_HOSTS = ['cs2340spotify.vercel.app', '127.0.0.1', 'localhost']
 
@@ -58,7 +57,6 @@ MIDDLEWARE = [
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 ROOT_URLCONF = "spotify_wrapped.urls"
 SESSION_ENGINE = "django.contrib.sessions.backends.db"
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 TEMPLATES = [
     {
@@ -122,8 +120,10 @@ USE_TZ = True
 
 SPOTIFY_CLIENT_ID = os.getenv('SPOTIFY_CLIENT_ID')
 SPOTIFY_CLIENT_SECRET = os.getenv('SPOTIFY_CLIENT_SECRET')
-SPOTIFY_REDIRECT_URI = 'http://localhost:8000/callback/'
-
+SPOTIFY_REDIRECT_URI = os.getenv(
+    'SPOTIFY_REDIRECT_URI',
+    'http://localhost:8000/callback/'
+)
 GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
 
 # Static files (CSS, JavaScript, Images)
