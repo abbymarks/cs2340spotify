@@ -1,2 +1,3 @@
 manage.py
 spotify_wrapped/wsgi.py
+db.sqlite3
