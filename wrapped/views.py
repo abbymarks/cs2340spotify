@@ -11,6 +11,7 @@ from django.http import JsonResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.conf import settings
 import spotipy
+from spotipy.oauth2 import SpotifyOAuth
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods
 from spotipy.oauth2 import SpotifyOAuth
