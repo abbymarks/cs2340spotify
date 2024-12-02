@@ -124,8 +124,7 @@ SPOTIPY_REDIRECT_URI = "https://cs2340spotify-4ed829aec62a.herokuapp.com/callbac
 auth_manager = SpotifyOAuth(
     client_id=os.getenv("SPOTIPY_CLIENT_ID"),
     client_secret=os.getenv("SPOTIPY_CLIENT_SECRET"),
-    redirect_uri=SPOTIPY_REDIRECT_URI,
-    scope="user-library-read"
+    redirect_uri=os.getenv("SPOTIPY_REDIRECT_URI"),
 )
 SPOTIFY_REDIRECT_URI = 'https://cs2340spotify-4ed829aec62a.herokuapp.com/callback/'
 
