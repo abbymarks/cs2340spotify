@@ -59,7 +59,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = 'spotify_wrapped.spotify_wrapped.urls'
+ROOT_URLCONF = 'urls'
 
 TEMPLATES = [
     {
@@ -135,7 +135,7 @@ GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
 
 MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'spotify_wrapped/staticfiles')
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
