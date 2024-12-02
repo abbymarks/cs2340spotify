@@ -13,6 +13,7 @@ from pathlib import Path
 import os
 from dotenv import load_dotenv
 import dj_database_url
+from decouple import config
 load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,12 +26,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DEBUG", "False") == "True"
+SECRET_KEY = config('SECRET_KEY', default='default-key')
+DEBUG = config('DEBUG', default=False, cast=bool)
 
-SECRET_KEY = os.getenv('SECRET_KEY')
-
-if not SECRET_KEY:
-    raise ValueError("The SECRET_KEY environment variable is not set.")
 
 
 ALLOWED_HOSTS = ['cs2340spotify-4ed829aec62a.herokuapp.com', '127.0.0.1', 'localhost']
@@ -61,7 +59,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "spotify_wrapped.urls"
+ROOT_URLCONF = 'spotify_wrapped.spotify_wrapped.urls'
 
 TEMPLATES = [
     {
@@ -86,7 +84,11 @@ WSGI_APPLICATION = "spotify_wrapped.wsgi.application"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-        "default": dj_database_url.config(conn_max_age=600, ssl_require=True)
+    'default': dj_database_url.config(
+        default=os.getenv('DATABASE_URL'),
+        conn_max_age=600,
+        ssl_require=True
+    )
 }
 
 

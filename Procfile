@@ -1,1 +1,1 @@
-web: gunicorn --chdir spotify_wrapped spotify_wrapped.wsgi
+web: gunicorn cs2340spotify.wsgi

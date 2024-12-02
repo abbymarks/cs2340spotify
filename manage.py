@@ -2,14 +2,16 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-from django.core.wsgi import get_wsgi_application
 
+# Add the project root directory to sys.path
+current_path = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(current_path)
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "spotify_wrapped.settings")
-    application = get_wsgi_application()
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'spotify_wrapped.spotify_wrapped.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
@@ -21,5 +23,5 @@ def main():
     execute_from_command_line(sys.argv)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
