@@ -5,7 +5,9 @@ dj-database-url==2.3.0
 Django==5.1.2
 djangorestframework==3.15.2
 googlemaps==4.10.0
+gunicorn==23.0.0
 idna==3.10
+packaging==24.2
 redis==5.2.0
 requests==2.32.3
 spotipy==2.24.0
