@@ -1,3 +1,4 @@
+annotated-types==0.7.0
 appnope==0.1.4
 asgiref==3.8.1
 asttokens==3.0.0
@@ -5,6 +6,7 @@ attrs==24.2.0
 backcall==0.2.0
 beautifulsoup4==4.12.3
 bleach==6.2.0
+cachetools==5.5.0
 certifi==2024.8.30
 charset-normalizer==3.4.0
 decorator==5.1.1
@@ -14,7 +16,17 @@ djangorestframework==3.15.2
 docopt==0.6.2
 executing==2.1.0
 fastjsonschema==2.21.0
+google-ai-generativelanguage==0.6.10
+google-api-core==2.23.0
+google-api-python-client==2.154.0
+google-auth==2.36.0
+google-auth-httplib2==0.2.0
+google-generativeai==0.8.3
+googleapis-common-protos==1.66.0
+grpcio==1.68.0
+grpcio-status==1.68.0
 gunicorn==23.0.0
+httplib2==0.22.0
 idna==3.10
 ipython==8.12.3
 jedi==0.19.2
@@ -38,9 +50,16 @@ pickleshare==0.7.5
 pipreqs==0.5.0
 platformdirs==4.3.6
 prompt_toolkit==3.0.48
+proto-plus==1.25.0
+protobuf==5.29.0
 ptyprocess==0.7.0
 pure_eval==0.2.3
+pyasn1==0.6.1
+pyasn1_modules==0.4.1
+pydantic==2.10.2
+pydantic_core==2.27.1
 Pygments==2.18.0
+pyparsing==3.2.0
 python-dateutil==2.9.0.post0
 python-dotenv==1.0.1
 pyzmq==26.2.0
@@ -48,6 +67,7 @@ redis==5.2.0
 referencing==0.35.1
 requests==2.32.3
 rpds-py==0.21.0
+rsa==4.9
 six==1.16.0
 soupsieve==2.6
 spotipy==2.24.0
@@ -55,7 +75,10 @@ sqlparse==0.5.2
 stack-data==0.6.3
 tinycss2==1.4.0
 tornado==6.4.2
+tqdm==4.67.1
 traitlets==5.14.3
+typing_extensions==4.12.2
+uritemplate==4.1.1
 urllib3==2.2.3
 wcwidth==0.2.13
 webencodings==0.5.1
