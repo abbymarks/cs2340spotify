@@ -118,9 +118,13 @@ USE_I18N = True
 
 USE_TZ = True
 
-SPOTIFY_CLIENT_ID = os.getenv('SPOTIFY_CLIENT_ID')
-SPOTIFY_CLIENT_SECRET = os.getenv('SPOTIFY_CLIENT_SECRET')
-
+SPOTIPY_REDIRECT_URI = "https://cs2340spotify-4ed829aec62a.herokuapp.com/callback/"
+auth_manager = SpotifyOAuth(
+    client_id=os.getenv("SPOTIPY_CLIENT_ID"),
+    client_secret=os.getenv("SPOTIPY_CLIENT_SECRET"),
+    redirect_uri=SPOTIPY_REDIRECT_URI,
+    scope="user-library-read"
+)
 SPOTIFY_REDIRECT_URI = 'https://cs2340spotify-4ed829aec62a.herokuapp.com/callback/'
 
 GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
