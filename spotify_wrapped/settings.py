@@ -120,7 +120,7 @@ USE_TZ = True
 
 SPOTIFY_CLIENT_ID = os.getenv('SPOTIFY_CLIENT_ID')
 SPOTIFY_CLIENT_SECRET = os.getenv('SPOTIFY_CLIENT_SECRET')
-SPOTIFY_REDIRECT_URI = 'http://localhost:8000/callback/'
+SPOTIFY_REDIRECT_URI = 'https://cs2340spotify-4ed829aec62a.herokuapp.com/login/'
 
 GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
 
